@@ -1,0 +1,12 @@
+
+ <div class="firma" #firma id="firma">
+    <img id='firmaImg' #firmaImg src="/assets/templateVacio.png" alt="Firma digital">
+    <span class="nombre"> {{ nombreApellido | uppercase }}</span>
+    <span class="puesto"> {{puesto | titlecase}}</span>
+    <span class="interno">{{interno}}</span>
+    <span class="email">{{ email | lowercase}}</span>
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="descargarImagen()" routerLink="/form">Descargar</button>
+  </div>
+

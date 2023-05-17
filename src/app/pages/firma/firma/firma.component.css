@@ -1,0 +1,48 @@
+.firma {
+    position: relative;
+    display: inline-block;
+}
+.nombre {
+    position: absolute;
+    bottom: 360px;
+    left: 260px;
+    color: #2B2B2B;
+    font-weight: bold;
+    font-size: 25px;
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.puesto {
+    position: absolute;
+    bottom: 335px;
+    left: 260px;
+    font-weight: bold;
+    color: #55abcd;
+    font-size: 25px;
+    z-index: 1;
+    font-family: sans-serif;
+}
+
+.interno {
+    position: absolute;
+    bottom: 243px;
+    left: 400px;
+    color: #2B2B2B;
+    font-weight: bold;
+    font-size: 24px;
+    z-index: 1;
+    font-family: sans-serif;
+}
+
+.email {
+    position: absolute;
+    bottom: 214px;
+    left: 135px;
+    color: #2B2B2B;
+    font-weight: bold;
+    font-size: 24px;
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -1px;
+}

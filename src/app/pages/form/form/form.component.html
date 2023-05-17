@@ -1,0 +1,46 @@
+<div class="titulo">
+    <h1>Firma Digital</h1>
+    <h4>Complete el siguiente formulario para generar la firma digital del usuario</h4>
+</div>
+<form [formGroup]="formularioUsuario" class="form-container">
+    <div class="mb-3">
+      <label for="apellidos" class="form-label">Apellidos:</label>
+      <input type="text" id="apellidos" formControlName="apellidos" class="form-control" minlength="4" maxlength="50" required
+      [ngClass]="{'invalid': formularioUsuario.get('apellidos')?.invalid && (formularioUsuario.get('apellidos')?.dirty || formularioUsuario.get('apellidos')?.touched)}"
+      >
+      
+    </div>
+    <div class="mb-3">
+      <label for="nombres" class="form-label">Nombres:</label>
+      <input type="text" id="nombres" formControlName="nombres" class="form-control" minlength="4" maxlength="50" required
+      [ngClass]="{'invalid': formularioUsuario.get('nombres')?.invalid && (formularioUsuario.get('nombres')?.dirty || formularioUsuario.get('nombres')?.touched)}"
+      >
+      
+    </div>
+    <div class="mb-3">
+      <label for="puesto" class="form-label">Puesto:</label>
+      <input type="text" id="puesto" formControlName="puesto" class="form-control" minlength="4" maxlength="50" required
+      [ngClass]="{'invalid': formularioUsuario.get('puesto')?.invalid && (formularioUsuario.get('puesto')?.dirty || formularioUsuario.get('puesto')?.touched)}"
+      >
+      
+    </div>
+    <div class="mb-3">
+      <label for="interno" class="form-label">Interno:</label>
+      <input type="text" id="interno" formControlName="interno" class="form-control" maxlength="10" required
+      [ngClass]="{'invalid': formularioUsuario.get('interno')?.invalid && (formularioUsuario.get('interno')?.dirty || formularioUsuario.get('interno')?.touched)}"
+      >
+      
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" formControlName="email" class="form-control" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
+      [ngClass]="{'invalid': formularioUsuario.get('email')?.invalid && (formularioUsuario.get('email')?.dirty || formularioUsuario.get('email')?.touched)}"
+      >
+      
+    </div>
+    <button type="submit" routerLink="/firma" class="btn btn-primary" (click)="enviarDatos()" [disabled]="!formularioUsuario.valid">Enviar</button>
+    
+  </form>
+
+
+  
